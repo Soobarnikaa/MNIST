@@ -1,0 +1,35 @@
+MNISTModel(
+  (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (fc1): Linear(in_features=3136, out_features=128, bias=True)
+  (fc2): Linear(in_features=128, out_features=10, bias=True)
+)
+
+Model Summary:
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 32, 28, 28]             320
+         MaxPool2d-2           [-1, 32, 14, 14]               0
+            Conv2d-3           [-1, 64, 14, 14]          18,496
+         MaxPool2d-4             [-1, 64, 7, 7]               0
+            Linear-5                  [-1, 128]         401,536
+            Linear-6                   [-1, 10]           1,290
+================================================================
+Total params: 421,642
+Trainable params: 421,642
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 0.36
+Params size (MB): 1.61
+Estimated Total Size (MB): 1.97
+----------------------------------------------------------------
+
+Dataset Summary:
+Training samples: 60000
+Testing samples: 10000
+Number of classes: 10
+Input shape: torch.Size([1, 28, 28])
+Input size: 0.00 MB per sample(Input Image Less one 1MB so Mentioned zero)
